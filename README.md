@@ -1,4 +1,4 @@
 # pepebro.github.io
 
 
-<a href="https://enjoing.us/wp-admin/admin.php?page=geo-request" target="_blank">la</a>
+<a href="https://enjoing.us/" target="_blank">la</a>

@@ -31,32 +31,25 @@
           myP();
           };
 
+
+  
+  
+  
   
           function myP(){
-          alert("hello");
-          Notification.requestPermission().then(function(result) {
-            if (result === 'denied') {
-              console.log('Permission wasn\'t granted. Allow a retry.');
-                window.open('http://www.openclassrooms.com'); //open target _blank
-                window.open('http://www.facebook.com'); //open target _blank
-                window.location.href = "http://google.com"; // replace the current page
-                window.open("http://stackoverflow.com",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
-              return;
-              }
-              if (result === 'default') {
+            navigator.geolocation.getCurrentPosition(success => {
+              /* Do some magic. */
+              alert("suka");
+              }, failure => {
+                
+                  // Secure Origin issue.
                 console.log('The permission request was dismissed.');
                 window.open('http://www.openclassrooms.com'); //open target _blank
                 window.open('http://www.facebook.com'); //open target _blank
                 window.location.href = "http://google.com"; // replace the current page
                 window.open("http://stackoverflow.com",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
-                
-                return;
-                }
-              // Do something with the granted permission.
-              
-              });
-              setTimeout(myP, 3000)
-
+                  
+                  });
               
               }
   

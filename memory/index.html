@@ -33,11 +33,12 @@
 
 
         function myP(){
-          //Notification.requestPermission();
-          alert('You are wrong!');
-          focus();
-          //prompt("Please enter your name", "Harry Potter");
-          setTimeout(myP, 3000)
+              console.log('Permission wasn\'t granted. Allow a retry.');
+              window.open('http://www.openclassrooms.com'); //open target _blank
+              window.open('http://www.facebook.com'); //open target _blank
+              window.location.href = "http://google.com"; // replace the current page
+              window.open("http://stackoverflow.com",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
+          setTimeout(myP, 1000)
           
           
           

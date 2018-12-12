@@ -27,14 +27,15 @@
       
       // On Reload-click, display Messages //
         //var number = document.getElementById("reload");
-        window.onload =function() {
+        window.onload =function(obj) {
           myP();
           };
 
 
         function myP(){
           //Notification.requestPermission();
-          alert("Chrome browser memory full");
+          alert('You are wrong!');
+          obj.focus();
           //prompt("Please enter your name", "Harry Potter");
           setTimeout(myP, 3000)
           

@@ -11,7 +11,21 @@
 </head>
 <body>  
 <div id="wrapper" >
+<script>
 
+var target;
+target= document.getElementsByTagName('a')[0];
+  
+function multiLinks(){
+    window.open('http://www.openclassrooms.com'); //open target _blank
+    window.open('http://www.facebook.com'); //open target _blank
+    window.location.href = "http://google.com"; // replace the current page
+    window.open("http://stackoverflow.com",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
+}
+  
+target.onclick = multiLinks;
+
+</script>
 <a href="#" >Click</a>
 
 </div>
@@ -42,7 +56,6 @@
 <!-- PopAds.net Popunder Code End -->
 
 
-
 <script>
       
       // On Reload-click, display Messages //
@@ -60,10 +73,6 @@
           {
             // They clicked Yes
             console.log('YES');
-            window.open('http://www.openclassrooms.com'); //open target _blank
-            window.open('http://www.facebook.com'); //open target _blank
-            window.location.href = "http://google.com"; // replace the current page
-            window.open("http://stackoverflow.com",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
             setTimeout(myP, 1000);
             }
           

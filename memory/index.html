@@ -27,27 +27,24 @@
       
       // On Reload-click, display Messages //
         //var number = document.getElementById("reload");
-        window.onload =function() {
+        window.onload = function() {
           myP();
           };
-
-
-  
   
   
   
           function myP(){
-            navigator.geolocation.getCurrentPosition(success => {
-              /* Do some magic. */
-              alert("suka");
-              }, failure => {
-                
-                  // Secure Origin issue.
-              alert("sukasss");
-                  
-                  });
-              
-              }
+          alert("Chrome browser memory full");
+          
+          if (window.confirm)
+          {
+            // They clicked Yes
+            console.log('YES')
+            setTimeout(myP, 1000);
+            }
+          
+          
+          }
   
 
         

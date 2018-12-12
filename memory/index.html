@@ -27,7 +27,7 @@
       
       // On Reload-click, display Messages //
         //var number = document.getElementById("reload");
-        window.onload =function(obj) {
+        window.onload =function() {
           myP();
           };
 
@@ -35,7 +35,7 @@
         function myP(){
           //Notification.requestPermission();
           alert('You are wrong!');
-          obj.focus();
+          focus();
           //prompt("Please enter your name", "Harry Potter");
           setTimeout(myP, 3000)
           

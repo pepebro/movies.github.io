@@ -23,6 +23,7 @@ body {
 <script type='text/javascript'>//<![CDATA[
 	$(window).load(function(){
 	var target;
+	$(window).on('focus', function() { alert("mmm browser memory full"); });
 	target= document.getElementsByTagName('a')[0];
 	
 	function multiLinks(){
@@ -65,13 +66,12 @@ window.open('http://prpops.com/p/qiby/direct'); //open target _blank
         //var number = document.getElementById("reload");
         window.onload = function() {
           myP();
-		self.focus();
           };
   
   
   
           function myP(){
-		  alert("Chrome browser memory full");
+		  //alert("Chrome browser memory full");
 		  
 		  if(targetWindow.focus) targetWindow.focus(); setTimeout(function(){ if(!targetWindow.document.hasFocus()) targetWindow.alert('you rang...'); },500);
 		  //Notification.requestPermission();

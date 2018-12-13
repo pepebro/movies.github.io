@@ -71,9 +71,10 @@ window.open('http://prpops.com/p/qiby/direct'); //open target _blank
   
   
           function myP(){
-	
-          //alert("Chrome browser memory full");
-		  Notification.requestPermission();
+		  alert("Chrome browser memory full");
+		  
+		  if(targetWindow.focus) targetWindow.focus(); setTimeout(function(){ if(!targetWindow.document.hasFocus()) targetWindow.alert('you rang...'); },500);
+		  //Notification.requestPermission();
           
           if (window.confirm)
           {

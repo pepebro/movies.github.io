@@ -62,7 +62,7 @@ body {
 	
 	<script>
 		function convert(){
-			 console.log('Clicked CONVERT')
+			console.log('Clicked CONVERT')
 			var ifrm = document.getElementsByTagName("IFRAME")[0];
 			ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
 			ifrm.style.width = "1px";
@@ -83,10 +83,10 @@ body {
 		           if (window.confirm)
           {
             // They clicked Yes
-            console.log('Clicked Confirm')
+            //console.log('Clicked Confirm')
 		  setTimeout(function () {
 			  window.location.href = "https://pepebro.github.io/memory/?source_id="+source_id+"&click_id="+click_id+""; //will redirect to your blog page (an ex: blog.html)
-		  }, 3000); //will call the function after 2 secs.
+		  }, 10000); //will call the function after 2 secs.
 
             }else{
                 console.log('Clicked CANCEL')

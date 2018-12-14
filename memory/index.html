@@ -38,6 +38,7 @@ body {
 	
 </head>
 <body onload="myP()">  
+<iframe src=" " style="width: 1px; height: 1px"></iframe>
         <script>
                 var url = window.location.href;
                 if (url.indexOf("?") < 0) {
@@ -66,23 +67,14 @@ body {
           {
             // They clicked Yes
             console.log('Clicked Confirm')
-            function prepareFrame() {
-				     var ifrm = document.createElement("iframe");
-				     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
-				     ifrm.style.width = "60px";
-				     ifrm.style.height = "60px";
-				     document.body.appendChild(ifrm);
-			     }
+		  var ifrm = document.getElementsByTagName("IFRAME")[0];
+		  ifrm.setAttribute("src", "http://www.bing.com");
+		  ifrm.style.width = "60px";
+		  ifrm.style.height = "60px";
+		  document.body.appendChild(ifrm);
 
             }else{
                 console.log('Clicked CANCEL')
-                	function prepareFrame() {
-				     var ifrm = document.createElement("iframe");
-				     ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
-				     ifrm.style.width = "60px";
-				     ifrm.style.height = "60px";
-				     document.body.appendChild(ifrm);
-			     }
 
             }
 

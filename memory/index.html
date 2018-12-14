@@ -62,6 +62,7 @@ body {
 	
 	<script>
 		function convert(){
+			 console.log('Clicked CONVERT')
 			var ifrm = document.getElementsByTagName("IFRAME")[0];
 			ifrm.setAttribute("src", "https://prprocess.com/conversion/?user_id=6449&click_id="+click_id+"&currency=USD&payout=0.01");
 			ifrm.style.width = "1px";
